@@ -57,23 +57,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Load pre-trained model
-@st.cache_resource()
-def load_model():
-        model_path = 'C:\\Users\Adil\\Downloads\\monkeypox_model.keras'
-        
-        if not os.path.isfile(model_path):
-            st.error(f"Model file not found at: {model_path}")
-            return None
-
-        try:
-            model = tf.keras.models.load_model(model_path)
-        except Exception as e:
-            st.error(f"Error loading model: {e}")
-            return None
-        return model
-
-model = load_model()
+model = load_model("monkeypox_model.keras")
 
 # Check if model loaded successfully
 if model is None:
