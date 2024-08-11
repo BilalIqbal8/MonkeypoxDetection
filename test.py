@@ -60,7 +60,7 @@ st.markdown(
 # Load pre-trained model
 @st.cache_resource()
 def load_model():
-        model_path = 'C:\\Users\Adil\\Downloads\\monkeypox_model.keras'
+        model = load_model("monkeypox_model.keras")
         
         if not os.path.isfile(model_path):
             st.error(f"Model file not found at: {model_path}")
