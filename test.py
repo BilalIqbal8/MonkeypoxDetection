@@ -3,6 +3,7 @@ from streamlit_option_menu import option_menu
 from PIL import Image
 import numpy as np
 import tensorflow as tf
+from keras.models import load_model
 import pandas as pd
 import os
 
