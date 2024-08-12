@@ -58,11 +58,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-model = load_model("monkeypox_model.h5")
-
-# Check if model loaded successfully
-if model is None:
-    st.stop()
 
 # Preprocess image
 def preprocess_image(image):
